@@ -31,11 +31,13 @@ function init() {
 	stage = new createjs.Stage(canvas);
 	//stage.addChild(exportRoot);
 	stage.update();
-	var context = canvas.getContext('2d');
-	var centerX = canvas.width / 2;
-	var centerY = canvas.height / 2;
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 	
 	/*var createCircles = function(){
+		var context = canvas.getContext('2d');
+		var centerX = canvas.width / 2;
+		var centerY = canvas.height / 2;
 		var radius = 70;
 		context.beginPath();
 		context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
