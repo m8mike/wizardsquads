@@ -31,11 +31,11 @@ function init() {
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
+	var context = canvas.getContext('2d');
+	var centerX = canvas.width / 2;
+	var centerY = canvas.height / 2;
 	
-	var createCircles = function(){
-		var context = canvas.getContext('2d');
-		var centerX = canvas.width / 2;
-		var centerY = canvas.height / 2;
+	/*var createCircles = function(){
 		var radius = 70;
 		context.beginPath();
 		context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
@@ -44,7 +44,7 @@ function init() {
 		context.lineWidth = 5;
 		context.strokeStyle = '#003300';
 		context.stroke();
-	}();
+	}();*/
 	
 	createjs.Ticker.setFPS(24);
 	//createjs.Ticker.addEventListener("tick", stage);
