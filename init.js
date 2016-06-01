@@ -34,6 +34,10 @@ var Unit = function(x, y) {
     this.maxSpeed = 1;
     this.health = random(50, 100);
     this.hpShown = false;
+	exportRoot = new lib.wizardus();
+	exportRoot.scaleX = 0.1;
+	exportRoot.scaleY = 0.1;
+	stage.addChild(exportRoot);
 };
 //draws Unit as yellow circle if selected or green if not
 Unit.prototype.draw = function() {
