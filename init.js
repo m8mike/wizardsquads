@@ -178,7 +178,7 @@ SelectionTool.prototype.onFinish = function() {
     checkSelection(this.start, this.finish);
     this.clean();
 };
-background(255, 255, 255);
+//background(255, 255, 255);
 units.push(new Unit(100, 100));
 units.push(new Enemy(300, 300));
 var selectionTool = new SelectionTool();
@@ -205,14 +205,14 @@ draw = function() {
     if (selectionTool.started) {
         selectionTool.onChange();
     }
-    background(255, 255, 255);
+    //background(255, 255, 255);
     for (var i = 0; i < units.length; i++) {
         units[i].update();
         //units[i].draw();
     }
-    if (selectionTool.started) {
+    //if (selectionTool.started) {
         //selectionTool.draw();
-    }
+    //}
 };
 mousePressed = function() {
     if (!selectionTool.started && mouseButton === LEFT) {
