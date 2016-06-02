@@ -1,3 +1,5 @@
+var sketchProc = function(processingInstance) {
+ with (processingInstance) {
 setup = function() {
 	size(window.innerWidth, window.innerHeight);
 	//background(255, 255, 255);
@@ -314,3 +316,4 @@ var onLMBClicked = function() {
 		}
     }
 };*/
+}};

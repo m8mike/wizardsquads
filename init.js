@@ -12,6 +12,7 @@ var addWizard = function(x, y) {
 
 function init() {
 	canvas = document.getElementById("canvas");
+	var processingInstance = new Processing(canvas, sketchProc);
 	//exportRoot = new lib.wizardus();
 	//exportRoot.scaleX = 0.1;
 	//exportRoot.scaleY = 0.1;
