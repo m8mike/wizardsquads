@@ -7,6 +7,7 @@ var addWizard = function(x, y) {
 	exportRoot.x = x;
 	exportRoot.y = y;
 	stage.addChild(exportRoot);
+	return exportRoot;
 };
 
 function init() {
@@ -47,7 +48,7 @@ function init() {
 			}
 		}
 	});
-	canvas.onclick = function(e) {
+	/*canvas.onclick = function(e) {
 		console.log("clicked on canvas");
 		var wiz1 = new lib.wizardus();
 		wiz1.x = e.clientX;
@@ -57,7 +58,7 @@ function init() {
 		//wiz1.snapToPixel = true;
 		wiz1.cache(wiz1.x, wiz1.y, wiz1.width, wiz1.height);
 		stage.addChild(wiz1);
-	};
+	};*/
 	/*keyboardJS.bind('e', function(e) {
 		exportRoot.scaleX *= 0.9;
 		exportRoot.scaleY = exportRoot.scaleX;
