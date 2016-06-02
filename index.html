@@ -61,7 +61,10 @@ function init() {
 	//createjs.Ticker.addEventListener("tick", stage);
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
-		stage.update();
+		stage.update();		
+		if (selectionTool.started) {
+			selectionTool.draw();
+		}
 	});
 	canvas.onclick = function(e) {
 		console.log("clicked on canvas");
