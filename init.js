@@ -24,11 +24,12 @@ function init() {
 		stage.update();
 		if (selectionTool) {
 			if (selectionTool.started) {
-				canvas.save();
-				selectionTool.draw();
-				canvas.restore();
+				//selectionTool.draw();
+				var p = Graphics.prototype;
+				p.rect(selectionTool.start.x, selectionTool.start.y, 
+						selectionTool.finish.x - selectionTool.start.x, 
+						selectionTool.finish.y - selectionTool.start.y);
 			}
 		}
-		
 	});
 };
