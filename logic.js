@@ -1,4 +1,6 @@
+console.log("logic.js");
 setup = function() {
+	console.log("logic.js setup()");
 	size(window.innerWidth, window.innerHeight);
 };
 //simple point in cartesian coordinates

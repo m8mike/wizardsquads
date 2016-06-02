@@ -1,3 +1,4 @@
+console.log("logic.pde");
 setup = function() {
 	size(window.innerWidth, window.innerHeight);
 };
