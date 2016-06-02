@@ -41,7 +41,7 @@ var Unit = function(x, y) {
     this.maxSpeed = 1;
     this.health = random(50, 100);
     this.hpShown = false;
-	this.costume = addWizard(x, y);
+	//this.costume = addWizard(x, y);
 };
 //draws Unit as yellow circle if selected or green if not
 Unit.prototype.draw = function() {
