@@ -1,6 +1,7 @@
 setup = function() {
 	size(window.innerWidth, window.innerHeight);
 };
+setup();
 //simple point in cartesian coordinates
 var Point = function(x, y) {
     this.x = x;
