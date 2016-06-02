@@ -220,6 +220,7 @@ draw = function() {
     }
 };
 mousePressed = function() {
+	console.log(selectionTool.started);
     if (!selectionTool.started && mouseButton === LEFT) {
         selectionTool.onStart();
     }
