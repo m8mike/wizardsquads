@@ -26,10 +26,8 @@ function init() {
 		selectionToolShape.graphics.clear();
 		if (selectionTool) {
 			if (selectionTool.started) {
-				console.log("started");
-				//selectionTool.draw();
 				selectionToolShape.alpha = 0.5;
-				selectionToolShape.graphics.clear().beginFill("#0000FF").drawRect(
+				selectionToolShape.graphics.beginFill("#0000FF").drawRect(
 						selectionTool.start.x, selectionTool.start.y, 
 						selectionTool.finish.x - selectionTool.start.x, 
 						selectionTool.finish.y - selectionTool.start.y);

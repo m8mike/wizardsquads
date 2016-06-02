@@ -3,7 +3,9 @@ var sketchProc = function(processingInstance) {
 setup = function() {
 	size(window.innerWidth, window.innerHeight);
 	//background(255, 255, 255);
-	units.push(new Unit(100, 100));
+	for(var i = 0; i < 100; i++) {
+		units.push(new Unit(random(0, window.innerWidth), random(0, window.innerHeight)));
+	}
 	units.push(new Enemy(300, 300));
 	selectionTool = new SelectionTool();
 };
