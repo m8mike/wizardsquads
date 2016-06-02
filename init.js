@@ -1,5 +1,5 @@
 var canvas, stage, exportRoot;
-var selectionTool;//logic in logic.js
+var selectionTool;//from logic.js
 var addWizard = function(x, y) {
 	exportRoot = new lib.wizardus();
 	exportRoot.scaleX = 0.1;
@@ -41,7 +41,6 @@ function init() {
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
 		stage.update();
-		console.log(selectionTool);
 		if (selectionTool) {
 			if (selectionTool.started) {
 				selectionTool.draw();
