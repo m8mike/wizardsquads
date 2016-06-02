@@ -1,4 +1,4 @@
-var selectionTool = 1;
+var selectionTool = 2;
 setup = function() {
 	console.log("setup 1");
 	size(window.innerWidth, window.innerHeight);
