@@ -1,10 +1,15 @@
 var selectionTool = 1;
 setup = function() {
+	console.log("setup 1");
 	size(window.innerWidth, window.innerHeight);
+	console.log("setup 2");
 	//background(255, 255, 255);
 	units.push(new Unit(100, 100));
+	console.log("setup 3");
 	units.push(new Enemy(300, 300));
+	console.log("setup 4");
 	selectionTool = new SelectionTool();
+	console.log("setup 5");
 };
 //simple point in cartesian coordinates
 var Point = function(x, y) {
