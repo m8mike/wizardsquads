@@ -22,8 +22,10 @@ function init() {
 	createjs.Ticker.setFPS(24);
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
-		ctx.fillStyle = "#ffffff";
-        ctx.fillRect(0,0,canvas.width,canvas.height);
+		
+		ctx.rect(0, 0, canvas.width,canvas.height);
+		ctx.fillStyle = "#FFFFFF";
+		ctx.fill();
 		stage.update();
 		if (selectionTool) {
 			if (selectionTool.started) {
