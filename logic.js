@@ -41,7 +41,7 @@ var Unit = function(x, y) {
     this.maxSpeed = 1;
     this.health = random(50, 100);
     this.hpShown = false;
-	//this.costume = addWizard(x, y);
+	this.costume = addWizard(x, y);
 };
 //draws Unit as yellow circle if selected or green if not
 Unit.prototype.draw = function() {
@@ -218,13 +218,13 @@ draw = function() {
         selectionTool.draw();
     }
 };
-mousePressed = function() {
-    if (!selectionTool.started && mouseButton === LEFT) {
+var onLMBPressed = function() {
+    if (!selectionTool.started) {
         selectionTool.onStart();
     }
 };
-mouseReleased = function() {
-    if (selectionTool.started && mouseButton === LEFT) {
+var onLMBReleased = function() {
+    if (selectionTool.started ) {
         if (selectionTool.start.equals(selectionTool.finish)) {
             selectionTool.clean();
         } else {
@@ -232,7 +232,52 @@ mouseReleased = function() {
         }
     }
 };
-mouseClicked = function() {
+/*mousePressed = function() {
+    if (!selectionTool.started && mouseButton === LEFT) {
+        selectionTool.onStart();
+    }
+};*/
+/*mouseReleased = function() {
+    if (selectionTool.started && mouseButton === LEFT) {
+        if (selectionTool.start.equals(selectionTool.finish)) {
+            selectionTool.clean();
+        } else {
+            selectionTool.onFinish();
+        }
+    }
+};*/
+var onRMBClicked = function() {
+	var destination = new Point(mouseX, mouseY);
+	var row = 0, column = 0;
+	for (var i = 0; i < units.length; i++) {
+		if (units[i].selected) {
+			var dest = destination.clone();
+			dest.x += column % 4 * 18;
+			dest.y += row * 18;
+			units[i].send(dest);
+			column++;
+			if (column % 4 === 0) {
+				row++;
+			}
+		}
+	}
+};
+var onLMBClicked = function() {
+	var oneUnitSelected = false;
+	for (var i = 0; i < units.length; i++) {
+		if (!oneUnitSelected) {
+			if (dist(units[i].x, units[i].y, mouseX, mouseY) <= 8) {
+				units[i].select();
+				oneUnitSelected = true;
+			} else {
+				units[i].diselect();
+			}
+		} else {
+			units[i].diselect();
+		}
+	}
+};
+/*mouseClicked = function() {
     if (mouseButton === RIGHT) {
         var destination = new Point(mouseX, mouseY);
 	    var row = 0, column = 0;
@@ -263,4 +308,4 @@ mouseClicked = function() {
 		    }
 		}
     }
-};
+};*/

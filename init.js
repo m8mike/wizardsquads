@@ -47,6 +47,21 @@ function init() {
 			}
 		}
 	});
+	canvas.onmousedown = function(e) {
+		onLMBPressed();
+	};
+	canvas.onmouseup = function(e) {
+		onLMBReleased();
+	};
+	canvas.onclick = function(e) {
+		var isRightMB;
+		e = e || window.event;
+		if ("which" in e)  // Gecko (Firefox), WebKit (Safari/Chrome) & Opera
+			isRightMB = e.which == 3; 
+		else if ("button" in e)  // IE, Opera 
+			isRightMB = e.button == 2; 
+		isRightMB?onLMBClicked():onRMBClicked();
+	};
 	/*canvas.onclick = function(e) {
 		console.log("clicked on canvas");
 		var wiz1 = new lib.wizardus();
