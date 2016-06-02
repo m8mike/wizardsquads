@@ -1,4 +1,5 @@
 var canvas, stage, exportRoot;
+var selectionTool;//logic in logic.js
 var addWizard = function(x, y) {
 	exportRoot = new lib.wizardus();
 	exportRoot.scaleX = 0.1;
