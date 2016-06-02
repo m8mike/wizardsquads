@@ -22,11 +22,14 @@ function init() {
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
 		stage.update();
+		console.log("tick");
 		if (selectionTool) {
+			console.log("selectionTool");
 			if (selectionTool.started) {
+				console.log("started");
 				//selectionTool.draw();
 				var shape = new createjs.Shape();
-				shape.alpha = 0.2;
+				shape.alpha = 0.5;
 				shape.graphics.beginFill("#FFFF00").drawRect(
 						selectionTool.start.x, selectionTool.start.y, 
 						selectionTool.finish.x - selectionTool.start.x, 
