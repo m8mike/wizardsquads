@@ -30,7 +30,7 @@ function init() {
 				console.log("started");
 				//selectionTool.draw();
 				selectionToolShape.alpha = 0.5;
-				selectionToolShape.graphics.beginFill("#FFFF00").drawRect(
+				selectionToolShape.graphics.clear().beginFill("#FFFF00").drawRect(
 						selectionTool.start.x, selectionTool.start.y, 
 						selectionTool.finish.x - selectionTool.start.x, 
 						selectionTool.finish.y - selectionTool.start.y);
