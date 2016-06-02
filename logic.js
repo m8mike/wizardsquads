@@ -207,7 +207,6 @@ var checkOver = function() {
     }
 };
 draw = function() {
-	console.log("draw");
     checkOver();
     if (selectionTool.started) {
         selectionTool.onChange();
@@ -221,7 +220,7 @@ draw = function() {
         selectionTool.draw();
     }
 };
-var onLMBPressed = function() {
+/*var onLMBPressed = function() {
 	console.log("lmb pressed");
     if (!selectionTool.started) {
         selectionTool.onStart();
@@ -236,13 +235,13 @@ var onLMBReleased = function() {
             selectionTool.onFinish();
         }
     }
-};
-/*mousePressed = function() {
+};*/
+mousePressed = function() {
     if (!selectionTool.started && mouseButton === LEFT) {
         selectionTool.onStart();
     }
-};*/
-/*mouseReleased = function() {
+};
+mouseReleased = function() {
     if (selectionTool.started && mouseButton === LEFT) {
         if (selectionTool.start.equals(selectionTool.finish)) {
             selectionTool.clean();
@@ -250,8 +249,8 @@ var onLMBReleased = function() {
             selectionTool.onFinish();
         }
     }
-};*/
-var onRMBClicked = function() {
+};
+/*var onRMBClicked = function() {
 	console.log("rmb clicked");
 	var destination = new Point(mouseX, mouseY);
 	var row = 0, column = 0;
@@ -283,8 +282,8 @@ var onLMBClicked = function() {
 			units[i].diselect();
 		}
 	}
-};
-/*mouseClicked = function() {
+};*/
+mouseClicked = function() {
     if (mouseButton === RIGHT) {
         var destination = new Point(mouseX, mouseY);
 	    var row = 0, column = 0;
@@ -315,5 +314,5 @@ var onLMBClicked = function() {
 		    }
 		}
     }
-};*/
+};
 }};

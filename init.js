@@ -47,7 +47,7 @@ function init() {
 			}
 		}
 	});
-	canvas.onmousedown = function(e) {
+	/*canvas.onmousedown = function(e) {
 		onLMBPressed();
 	};
 	canvas.onmouseup = function(e) {
@@ -61,7 +61,7 @@ function init() {
 		else if ("button" in e)  // IE, Opera 
 			isRightMB = e.button == 2; 
 		isRightMB?onLMBClicked():onRMBClicked();
-	};
+	};*/
 	/*canvas.onclick = function(e) {
 		console.log("clicked on canvas");
 		var wiz1 = new lib.wizardus();
