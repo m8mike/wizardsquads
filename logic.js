@@ -218,14 +218,12 @@ draw = function() {
         selectionTool.draw();
     }
 };
-mousePressed = function() {
-	console.log("mousePressed");
+var mousePressed = function() {
     if (!selectionTool.started && mouseButton === LEFT) {
         selectionTool.onStart();
     }
 };
 mouseReleased = function() {
-	console.log("mouseReleased");
     if (selectionTool.started && mouseButton === LEFT) {
         if (selectionTool.start.equals(selectionTool.finish)) {
             selectionTool.clean();

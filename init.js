@@ -47,6 +47,9 @@ function init() {
 			}
 		}
 	});
+	canvas.onclick = function(e) {
+		mousePressed();
+	}
 	/*canvas.onclick = function(e) {
 		console.log("clicked on canvas");
 		var wiz1 = new lib.wizardus();
