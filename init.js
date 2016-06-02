@@ -40,6 +40,7 @@ function init() {
 	//createjs.Ticker.addEventListener("tick", stage);
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
+		processingInstance.background(255, 255, 255);
 		stage.update();
 		if (selectionTool) {
 			if (selectionTool.started) {
