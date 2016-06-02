@@ -34,6 +34,7 @@ function init() {
 						selectionTool.start.x, selectionTool.start.y, 
 						selectionTool.finish.x - selectionTool.start.x, 
 						selectionTool.finish.y - selectionTool.start.y);
+				stage.addChild(shape);
 			}
 		}
 	});
