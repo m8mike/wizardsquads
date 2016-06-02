@@ -1,7 +1,5 @@
-console.log("logic.js");
 var selectionTool;
 setup = function() {
-	console.log("logic.js setup()");
 	size(window.innerWidth, window.innerHeight);
 	//background(255, 255, 255);
 	units.push(new Unit(100, 100));
@@ -217,9 +215,9 @@ draw = function() {
         units[i].update();
         //units[i].draw();
     }
-    //if (selectionTool.started) {
-        //selectionTool.draw();
-    //}
+    if (selectionTool.started) {
+        selectionTool.draw();
+    }
 };
 mousePressed = function() {
     if (!selectionTool.started && mouseButton === LEFT) {

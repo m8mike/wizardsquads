@@ -1,5 +1,4 @@
 (function (lib, img, cjs) {
-console.log("wizardus.js");
 var p; // shortcut to reference prototypes
 
 // stage content:

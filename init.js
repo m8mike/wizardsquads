@@ -1,5 +1,4 @@
 var canvas, stage, exportRoot;
-console.log("init.js");
 var addWizard = function(x, y) {
 	exportRoot = new lib.wizardus();
 	exportRoot.scaleX = 0.1;
@@ -11,7 +10,6 @@ var addWizard = function(x, y) {
 };
 
 function init() {
-	console.log("init.js init()");
 	canvas = document.getElementById("canvas");
 	//exportRoot = new lib.wizardus();
 	//exportRoot.scaleX = 0.1;
