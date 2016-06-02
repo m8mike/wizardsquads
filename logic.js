@@ -205,6 +205,7 @@ var checkOver = function() {
     }
 };
 draw = function() {
+	console.log("draw");
     checkOver();
     if (selectionTool.started) {
         selectionTool.onChange();
@@ -219,11 +220,13 @@ draw = function() {
     }
 };
 var onLMBPressed = function() {
+	console.log("lmb pressed");
     if (!selectionTool.started) {
         selectionTool.onStart();
     }
 };
 var onLMBReleased = function() {
+	console.log("lmb released");
     if (selectionTool.started ) {
         if (selectionTool.start.equals(selectionTool.finish)) {
             selectionTool.clean();
@@ -247,6 +250,7 @@ var onLMBReleased = function() {
     }
 };*/
 var onRMBClicked = function() {
+	console.log("rmb clicked");
 	var destination = new Point(mouseX, mouseY);
 	var row = 0, column = 0;
 	for (var i = 0; i < units.length; i++) {
@@ -263,6 +267,7 @@ var onRMBClicked = function() {
 	}
 };
 var onLMBClicked = function() {
+	console.log("lmb clicked");
 	var oneUnitSelected = false;
 	for (var i = 0; i < units.length; i++) {
 		if (!oneUnitSelected) {
