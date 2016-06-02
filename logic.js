@@ -9,7 +9,7 @@ setup = function() {
 	units.push(new Enemy(300, 300));
 	console.log("setup 4");
 	selectionTool = new SelectionTool();
-	console.log("setup 5");
+	console.log("setup 5 " + selectionTool);
 };
 //simple point in cartesian coordinates
 var Point = function(x, y) {
