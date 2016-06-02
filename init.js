@@ -12,7 +12,6 @@ var addWizard = function(x, y) {
 
 function init() {
 	canvas = document.getElementById("canvas");
-	var processingInstance = new Processing(canvas, sketchProc);
 	//exportRoot = new lib.wizardus();
 	//exportRoot.scaleX = 0.1;
 	//exportRoot.scaleY = 0.1;
@@ -22,7 +21,7 @@ function init() {
 	stage.update();
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
-	
+	var processingInstance = new Processing(canvas, sketchProc);
 	/*var createCircles = function(){
 		var context = canvas.getContext('2d');
 		var centerX = canvas.width / 2;
