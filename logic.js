@@ -216,9 +216,9 @@ draw = function() {
         units[i].update();
         //units[i].draw();
     }
-    if (selectionTool.started) {
+    /*if (selectionTool.started) {
         selectionTool.draw();
-    }
+    }*/
 };
 /*var onLMBPressed = function() {
 	console.log("lmb pressed");
