@@ -16,12 +16,14 @@ function init() {
 	stage.update();
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
+	var ctx = canvas.getContext("2d");
 	var processingInstance = new Processing(canvas, sketchProc);
 	
 	createjs.Ticker.setFPS(24);
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
-		processingInstance.background(0, 255, 0);
+		ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
 		stage.update();
 		if (selectionTool) {
 			if (selectionTool.started) {
