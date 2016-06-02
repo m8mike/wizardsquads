@@ -27,6 +27,9 @@ function init() {
 		//console.log(createjs.Ticker.getMeasuredFPS());
 		stage.update();
 		for (var i = 0; i < units.length; i++) {
+			if (Math.random() < 0.5) {
+				continue;
+			}
 			if (units[i].destination) {
 				units[i].costume.updateCache();
 			} else {
