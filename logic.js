@@ -218,7 +218,7 @@ draw = function() {
         selectionTool.draw();
     }
 };
-var mousePressed = function() {
+mousePressed = function() {
     if (!selectionTool.started && mouseButton === LEFT) {
         selectionTool.onStart();
     }
