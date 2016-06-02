@@ -6,6 +6,7 @@ var addWizard = function(x, y) {
 	exportRoot.scaleY = 0.1;
 	exportRoot.x = x;
 	exportRoot.y = y;
+	exportRoot.cache()
 	stage.addChild(exportRoot);
 	return exportRoot;
 };
