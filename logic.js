@@ -1,11 +1,11 @@
 console.log("logic.js");
+var selectionTool = new SelectionTool();
 setup = function() {
 	console.log("logic.js setup()");
 	size(window.innerWidth, window.innerHeight);
 	//background(255, 255, 255);
 	units.push(new Unit(100, 100));
 	units.push(new Enemy(300, 300));
-	var selectionTool = new SelectionTool();
 };
 //simple point in cartesian coordinates
 var Point = function(x, y) {
