@@ -7,7 +7,6 @@ setup = function() {
 	units.push(new Enemy(300, 300));
 	var selectionTool = new SelectionTool();
 };
-setup();
 //simple point in cartesian coordinates
 var Point = function(x, y) {
     this.x = x;
