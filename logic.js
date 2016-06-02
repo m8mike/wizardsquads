@@ -2,6 +2,10 @@ console.log("logic.js");
 setup = function() {
 	console.log("logic.js setup()");
 	size(window.innerWidth, window.innerHeight);
+	//background(255, 255, 255);
+	units.push(new Unit(100, 100));
+	units.push(new Enemy(300, 300));
+	var selectionTool = new SelectionTool();
 };
 //simple point in cartesian coordinates
 var Point = function(x, y) {
@@ -182,10 +186,6 @@ SelectionTool.prototype.onFinish = function() {
     checkSelection(this.start, this.finish);
     this.clean();
 };
-//background(255, 255, 255);
-units.push(new Unit(100, 100));
-units.push(new Enemy(300, 300));
-var selectionTool = new SelectionTool();
 var checkOver = function() {
     if (selectionTool.started) {
         return null;
