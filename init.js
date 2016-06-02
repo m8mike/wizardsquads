@@ -1,3 +1,4 @@
+size(window.innerWidth, window.innerHeight);
 //simple point in cartesian coordinates
 var Point = function(x, y) {
     this.x = x;
