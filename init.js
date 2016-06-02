@@ -25,8 +25,10 @@ function init() {
 		if (selectionTool) {
 			if (selectionTool.started) {
 				//selectionTool.draw();
-				var p = Graphics.prototype;
-				p.rect(selectionTool.start.x, selectionTool.start.y, 
+				var shape = new createjs.Shape();
+				shape.alpha = 0.2;
+				shape.graphics.beginFill("#FFFF00").drawRect(
+						selectionTool.start.x, selectionTool.start.y, 
 						selectionTool.finish.x - selectionTool.start.x, 
 						selectionTool.finish.y - selectionTool.start.y);
 			}
