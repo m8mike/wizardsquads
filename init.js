@@ -31,14 +31,11 @@ var Unit = function(x, y) {
     this.x = x;
     this.y = y;
     this.selected = false;
-    this.draw();
+    //this.draw();
     this.maxSpeed = 1;
     this.health = random(50, 100);
     this.hpShown = false;
-	exportRoot = new lib.wizardus();
-	exportRoot.scaleX = 0.1;
-	exportRoot.scaleY = 0.1;
-	stage.addChild(exportRoot);
+	addWizard(x, y);
 };
 //draws Unit as yellow circle if selected or green if not
 Unit.prototype.draw = function() {
@@ -58,19 +55,19 @@ Unit.prototype.teleportTo = function(x, y) {
 };
 Unit.prototype.select = function() {
     this.selected = true;
-    this.draw();
+    //this.draw();
 };
 Unit.prototype.diselect = function() {
     this.selected = false;
-    this.draw();
+    //this.draw();
 };
 Unit.prototype.showHP = function() {
     this.hpShown = true;
-    this.draw();
+    //this.draw();
 };
 Unit.prototype.hideHP = function() {
     this.hpShown = false;
-    this.draw();
+    //this.draw();
 };
 Unit.prototype.countNextMove = function(destination) {
 	var vec = new Point(this.x - destination.x, this.y - destination.y);
@@ -167,7 +164,7 @@ SelectionTool.prototype.onStart = function() {
 SelectionTool.prototype.onChange = function() {
     this.finish.x = mouseX;
     this.finish.y = mouseY;
-    this.draw();
+    //this.draw();
 };
 SelectionTool.prototype.clean = function() {
     this.started = false;
@@ -203,7 +200,7 @@ var checkOver = function() {
 	    }
     }
 };
-var gameCycle = function() {
+draw = function() {
     checkOver();
     if (selectionTool.started) {
         selectionTool.onChange();
@@ -211,10 +208,10 @@ var gameCycle = function() {
     background(255, 255, 255);
     for (var i = 0; i < units.length; i++) {
         units[i].update();
-        units[i].draw();
+        //units[i].draw();
     }
     if (selectionTool.started) {
-        selectionTool.draw();
+        //selectionTool.draw();
     }
 };
 mousePressed = function() {

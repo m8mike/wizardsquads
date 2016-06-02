@@ -22,6 +22,15 @@
 <script>
 var canvas, stage, exportRoot;
 
+var addWizard = function(x, y) {
+	exportRoot = new lib.wizardus();
+	exportRoot.scaleX = 0.1;
+	exportRoot.scaleY = 0.1;
+	exportRoot.x = x;
+	exportRoot.y = y;
+	stage.addChild(exportRoot);
+};
+
 function init() {
 	canvas = document.getElementById("canvas");
 	//exportRoot = new lib.wizardus();
@@ -52,8 +61,7 @@ function init() {
 	//createjs.Ticker.addEventListener("tick", stage);
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
-		//stage.update();
-		gameCycle();
+		stage.update();
 	});
 	canvas.onclick = function(e) {
 		console.log("clicked on canvas");
