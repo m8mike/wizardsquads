@@ -1,4 +1,4 @@
-setup() {
+setup = function() {
 	size(window.innerWidth, window.innerHeight);
 };
 //simple point in cartesian coordinates
