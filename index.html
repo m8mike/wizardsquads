@@ -52,6 +52,7 @@ function init() {
 	//createjs.Ticker.addEventListener("tick", stage);
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
+		gameCycle();
 		stage.update();
 	});
 	canvas.onclick = function(e) {

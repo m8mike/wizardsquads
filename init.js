@@ -203,7 +203,7 @@ var checkOver = function() {
 	    }
     }
 };
-draw = function() {
+var gameCycle = function() {
     checkOver();
     if (selectionTool.started) {
         selectionTool.onChange();
