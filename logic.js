@@ -128,7 +128,6 @@ Enemy.prototype.draw = function() {
 };
 Enemy.prototype.select = function(){};
 Enemy.prototype.diselect = function(){};
-var units = [];
 //checks if units are in rectangle between start and finish points
 var checkSelection = function(start, finish) {
     for (var i = 0; i < units.length; i++) {

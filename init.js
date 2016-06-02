@@ -1,4 +1,5 @@
 var canvas, stage, exportRoot;
+var units = [];//from logic.js
 var selectionTool;//from logic.js
 var addWizard = function(x, y) {
 	exportRoot = new lib.wizardus();
@@ -25,6 +26,18 @@ function init() {
 	createjs.Ticker.addEventListener("tick", function(e) {
 		//console.log(createjs.Ticker.getMeasuredFPS());
 		stage.update();
+		for (var i = 0; i < units.length; i++) {
+			if (units[i].destination) {
+				units[i].costume.updateCache();
+			} else {
+				continue;
+			}
+			if (units[i].destination.x < units[i].x){
+				units[i].costume.scaleX = -Math.abs(units[i].costume.scaleX);
+			} else {
+				units[i].costume.scaleX = Math.abs(units[i].costume.scaleX);
+			}
+		}
 		selectionToolShape.graphics.clear();
 		if (selectionTool) {
 			if (selectionTool.started) {
