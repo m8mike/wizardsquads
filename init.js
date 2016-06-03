@@ -7,7 +7,9 @@ var addWizard = function(x, y) {
 	exportRoot.scaleY = 0.1;
 	exportRoot.x = x;
 	exportRoot.y = y;
-	console.log(exportRoot.width + " " + exportRoot.height);
+	var width = exportRoot.getBounds().width;
+	var height = exportRoot.getBounds().height;
+	console.log(width + " " + height);
 	exportRoot.cacheScale = 0.1;
 	exportRoot.cache(10, 10, 150, 400);
 	exportRoot.snapToPixel = true;
