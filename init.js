@@ -8,6 +8,7 @@ var addWizard = function(x, y) {
 	exportRoot.x = x;
 	exportRoot.y = y;
 	console.log(exportRoot.width + " " + exportRoot.height);
+	exportRoot.cacheScale = 0.1;
 	exportRoot.cache(10, 10, 150, 400);
 	exportRoot.snapToPixel = true;
 	stage.addChild(exportRoot);
